@@ -1,0 +1,113 @@
+:root {
+  --Background: #fffffe;
+  --Headline: #094067;
+  --Paragraph: #5f6c7b;
+  --Button: #3da9fc;
+  --ButtonText: #fffffe;
+  --Stroke: #094067;
+  --Main: #fffffe;
+  --Highlight: #3da9fc;
+  --Secondary: #90b4ce;
+  --Tertiary: #ef4565;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+aside {
+  background-color: var(--Stroke);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 220px;
+  height: 100vh;
+}
+
+.navbar {
+  width: 100%;
+}
+
+a {
+  color: var(--Main);
+}
+
+.logo a {
+  font-size: 2.5rem;
+  font-style: italic;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.logo a:hover {
+  transform: scale(1.3);
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+}
+
+ul li {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: var(--Main);
+  /* transition: all 0.2s ease-in; */
+  cursor: pointer;
+  padding: 1rem 2rem;
+  width: 100%;
+  position: relative;
+}
+
+ul li:hover,
+ul li.active {
+  background-color: var(--Main);
+  color: var(--Stroke);
+  border-top-right-radius: -4rem;
+}
+
+ul li.active,
+ul li:hover {
+  position: relative;
+}
+
+ul li.active::after,
+ul li.active::before,
+ul li:hover::after,
+ul li:hover::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--Stroke);
+  right: 0;
+}
+
+ul li.active::after,
+ul li:hover::after {
+  top: -20px;
+  border-radius: 0% 100% 100% 0% / 100% 0% 100% 0%;
+  box-shadow: 5px 5px 0 5px var(--Main);
+}
+
+ul li.active::before,
+ul li:hover::before {
+  bottom: -20px;
+  border-radius: 0% 100% 0% 100% / 100% 100% 0% 0%;
+  box-shadow: 5px -5px 0 5px var(--Main);
+}
+
+ul li:hover a,
+ul li.active a {
+  color: var(--Stroke);
+}
+
+ul li i {
+  margin-right: 1rem;
+}
