@@ -16,6 +16,28 @@ app.get("/", (req, res) => {
   res.status(200).render("index", { title: "index page" });
 });
 
+app.get("/dashboard", (req, res) => {
+  res.status(200).render("dashboard", { title: "dashboard page" });
+});
+app.get("/customers", (req, res) => {
+  res.status(200).render("customers", { title: "customers page" });
+});
+app.get("/message", (req, res) => {
+  res.status(200).render("message", { title: "message page" });
+});
+app.get("/help", (req, res) => {
+  res.status(200).render("help", { title: "help page" });
+});
+app.get("/settings", (req, res) => {
+  res.status(200).render("settings", { title: "settings page" });
+});
+app.get("/password", (req, res) => {
+  res.status(200).render("password", { title: "password page" });
+});
+app.get("/signout", (req, res) => {
+  res.status(200).render("signout", { title: "signout page" });
+});
+
 app.listen(PORT, () =>
   console.log(
     `Server started on ${process.env.NODE_ENV} mode in http://localhost:${PORT}`

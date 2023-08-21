@@ -4,31 +4,10 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet", href="style.css")
-    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css",integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous")
-
+    script(src="index.js" defer) 
     title #{title}
   body 
-    aside
-      .logo
-         a(href="/") logo
-      nav.navbar 
-        ul 
-          li.active
-            i.fa-solid.fa-house
-            a(href="/home") home
-          li  
-            i.fa-solid.fa-dashboard
-            a(href="/dashboard") dashboard
-          li  
-            i.fa-solid.fa-circle-info
-            a(href="/about") about  
-          li
-            i.fa-solid.fa-address-book
-            a(href="/contact") contact  
-          li
-            i.fa-solid.fa-product-hunt
-            a(href="/services") products
-              
-      .logout 
-        a(href="/logout") logout 
-          i.fa-solid.fa-right-from-bracket
+    .container 
+      include includes/navigation
+      include includes/main
+  include includes/scripts
