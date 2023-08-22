@@ -7,7 +7,9 @@ html(lang="en")
     script(src="index.js" defer) 
     title #{title}
   body 
-    .container 
-      include includes/navigation
-      include includes/main
+    .container
+      block navigation
+        include includes/navigation
+      block main
+        include includes/main
   include includes/scripts

@@ -22,6 +22,9 @@ app.get("/dashboard", (req, res) => {
 app.get("/customers", (req, res) => {
   res.status(200).render("customers", { title: "customers page" });
 });
+app.get("/orders", (req, res) => {
+  res.status(200).render("orders", { title: "orders page" });
+});
 app.get("/message", (req, res) => {
   res.status(200).render("message", { title: "message page" });
 });

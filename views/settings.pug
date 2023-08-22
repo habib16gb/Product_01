@@ -1,1 +1,10 @@
-extends index 
+extends index
+block navigation
+  include includes/navigation
+block main
+  main.main
+    include includes/topbar
+    .dataList
+      .orders 
+        .cardHeader
+          h2.centerText #{title}

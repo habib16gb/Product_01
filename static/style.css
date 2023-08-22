@@ -29,6 +29,11 @@ body {
   width: 100%;
 }
 
+.centerText {
+  font-size: 4rem;
+  margin: 0 auto;
+}
+
 .navigation {
   position: fixed;
   width: 300px;
