@@ -442,6 +442,30 @@ body {
   color: var(--Main);
 }
 
+/* 404 page */
+
+.notfound {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Stroke);
+  color: var(--Main);
+  flex-direction: column;
+}
+
+.notfound h1 {
+  font-size: 4rem;
+  text-transform: capitalize;
+}
+
+.notfound p {
+  margin: 4rem auto;
+  text-align: center;
+  padding: 0 5rem;
+  font-size: 1.2rem;
+}
 /* Media query (Responsive) */
 
 @media (max-width: 991px) {
