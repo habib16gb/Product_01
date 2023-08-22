@@ -313,7 +313,7 @@ body {
   margin-top: 0.8rem;
 }
 
-.dataList table th {
+.dataList .orders table th {
   font-weight: 600;
   color: var(--Headline);
   text-transform: capitalize;
@@ -322,24 +322,181 @@ body {
   font-size: 1.1rem;
 }
 
-.dataList table tbody tr {
+.dataList .orders table tbody tr {
   color: var(--Paragraph);
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.dataList table tr:nth-child(even) {
+.dataList .orders table .orders tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-.dataList table tr:last-child {
+.dataList .orders table .orders tr:last-child {
   border: none;
 }
 
-.dataList table tbody tr:hover {
+.dataList .orders table tbody tr:hover {
   background-color: var(--Highlight);
   color: var(--Main);
 }
 
-.dataList table td {
+.dataList .orders table td {
   padding: 0.5rem;
+}
+
+.dataList .orders table tr td:last-child,
+.dataList .orders table tr th:last-child,
+.dataList .orders table tr td:nth-child(2),
+.dataList .orders table tr th:nth-child(2) {
+  text-align: end;
+  text-transform: capitalize;
+}
+
+.dataList .orders table tr td:nth-child(3),
+.dataList .orders table tr th:nth-child(3) {
+  text-align: center;
+}
+
+.status {
+  padding: 0.2rem 0.4rem;
+  color: var(--Main);
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.delivered {
+  background-color: rgb(56, 210, 56);
+}
+.return {
+  background-color: red;
+}
+.pending {
+  background-color: rgb(204, 201, 31);
+}
+.progress {
+  background-color: rgb(60, 103, 214);
+}
+
+.recentCustomers {
+  position: relative;
+  display: grid;
+  min-height: 500px;
+  padding: 2rem;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 1.5rem;
+}
+
+.recentCustomers .imgBx {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.recentCustomers .imgBx img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.bxTd {
+  width: 60px;
+}
+
+.recentCustomers table tr:hover {
+  background-color: var(--Highlight);
+  color: var(--Main);
+}
+
+.recentCustomers table tr td {
+  padding: 0.4rem 0.8rem;
+}
+
+.recentCustomers h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.2rem;
+  color: var(--Headline);
+  text-transform: capitalize;
+}
+
+.recentCustomers h5 {
+  font-size: 0.8rem;
+  color: var(--Paragraph);
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+
+.recentCustomers table tr:hover h5,
+.recentCustomers table tr:hover h4 {
+  color: var(--Main);
+}
+
+/* Media query (Responsive) */
+
+@media (max-width: 991px) {
+  .navigation {
+    left: -300px;
+  }
+  .navigation.active {
+    width: 300px;
+    left: 0;
+  }
+  .main {
+    width: 100%;
+    left: 0;
+  }
+  .main.active {
+    left: 300px;
+  }
+  .cardBox {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .dataList {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .orders {
+    overflow: auto;
+  }
+  .status.progress {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardBox {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .cardHeader h2 {
+    font-size: 1.2rem;
+  }
+  .user {
+    min-width: 40px;
+  }
+  .navigation {
+    width: 100%;
+    left: -100%;
+    z-index: 50;
+  }
+  .navigation.active {
+    width: 100%;
+    left: 0;
+  }
+  .toggle {
+    z-index: 55;
+  }
+  .main.active .toggle {
+    color: var(--Main);
+    position: fixed;
+    right: 0;
+    left: initial;
+  }
 }
